@@ -1,0 +1,996 @@
+2025-11-07 17:28:31 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 17:28:33 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 17:28:33 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 17:28:33 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 17:28:33 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 17:28:33 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 17:28:33 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 17:28:33 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 17:28:33 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:83 | Initializing pipeline stages...
+2025-11-07 17:28:33 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:48 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 17:28:33 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: PreprocessingStage
+2025-11-07 17:28:33 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: OCRStage
+2025-11-07 17:28:33 | [93mWARNING[0m | [94msrc.core.pipeline_manager[0m | __init__:87 | Unknown stage 'phi_scrubbing' in settings. Skipping.
+2025-11-07 17:28:33 | [92mINFO[0m | [94mClassificationStage[0m | __init__:39 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:28:34 | [92mINFO[0m | [94mClassificationStage[0m | __init__:41 | spaCy model loaded successfully.
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: ClassificationStage
+2025-11-07 17:28:34 | [92mINFO[0m | [94mExtractionStage[0m | __init__:60 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:28:34 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:74 | Building spaCy EntityRuler from datasets...
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 17:28:34 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:102 | EntityRuler built with 107 patterns.
+2025-11-07 17:28:34 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: ExtractionStage
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: ValidationStage
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 17:28:34 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:46 | Summarization datasets loaded.
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: SummarizationStage
+2025-11-07 17:28:34 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | __init__:104 | Failed to instantiate stage 'packaging'. Check its __init__ args: PackagingStage.__init__() got an unexpected keyword argument 'dataset_service'
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:110 | Pipeline initialized with 6 active stages.
+2025-11-07 17:28:34 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 17:28:34 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 17:28:34 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 17:28:34 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 17:28:34 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Executing stage: PreprocessingStage
+2025-11-07 17:28:34 | [92mINFO[0m | [94mPreprocessingStage[0m | process:68 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 17:28:35 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | process_document:171 | Pipeline FAILED with unhandled exception: 'PreprocessingStage' object has no attribute 'name_enum'
+Traceback (most recent call last):
+  File "D:\Projects and Codes\Intelliscript\src\core\pipeline_manager.py", line 149, in process_document
+    data.stage_timings[stage.name_enum] = stage_time_ms
+                       ^^^^^^^^^^^^^^^
+AttributeError: 'PreprocessingStage' object has no attribute 'name_enum'
+2025-11-07 17:28:35 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:183 | Pipeline finished in 1365.98ms. Status: error
+2025-11-07 17:28:35 | [91mERROR[0m | [94m__main__[0m | main:168 | Processing failed. See errors below.
+2025-11-07 17:28:35 | [91mERROR[0m | [94m__main__[0m | main:170 |   - [STAGE: PipelineManager] An unexpected error occurred: 'PreprocessingStage' object has no attribute 'name_enum'
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:83 | Initializing pipeline stages...
+2025-11-07 17:43:16 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:48 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: PreprocessingStage
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: OCRStage
+2025-11-07 17:43:16 | [93mWARNING[0m | [94msrc.core.pipeline_manager[0m | __init__:87 | Unknown stage 'phi_scrubbing' in settings. Skipping.
+2025-11-07 17:43:16 | [92mINFO[0m | [94mClassificationStage[0m | __init__:39 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:43:16 | [92mINFO[0m | [94mClassificationStage[0m | __init__:41 | spaCy model loaded successfully.
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: ClassificationStage
+2025-11-07 17:43:16 | [92mINFO[0m | [94mExtractionStage[0m | __init__:60 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:43:16 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:74 | Building spaCy EntityRuler from datasets...
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 17:43:16 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:102 | EntityRuler built with 107 patterns.
+2025-11-07 17:43:16 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: ExtractionStage
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: ValidationStage
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 17:43:16 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:46 | Summarization datasets loaded.
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:102 | Loaded stage: SummarizationStage
+2025-11-07 17:43:16 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | __init__:104 | Failed to instantiate stage 'packaging'. Check its __init__ args: PackagingStage.__init__() missing 1 required positional argument: 'stage_key'
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:110 | Pipeline initialized with 6 active stages.
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 17:43:16 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 17:43:16 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Executing stage: PreprocessingStage
+2025-11-07 17:43:16 | [92mINFO[0m | [94mPreprocessingStage[0m | process:68 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 17:43:17 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | process_document:171 | Pipeline FAILED with unhandled exception: 'PreprocessingStage' object has no attribute 'name_enum'
+Traceback (most recent call last):
+  File "D:\Projects and Codes\Intelliscript\src\core\pipeline_manager.py", line 149, in process_document
+    data.stage_timings[stage.name_enum] = stage_time_ms
+                       ^^^^^^^^^^^^^^^
+AttributeError: 'PreprocessingStage' object has no attribute 'name_enum'
+2025-11-07 17:43:17 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:183 | Pipeline finished in 1058.36ms. Status: error
+2025-11-07 17:43:17 | [91mERROR[0m | [94m__main__[0m | main:168 | Processing failed. See errors below.
+2025-11-07 17:43:17 | [91mERROR[0m | [94m__main__[0m | main:170 |   - [STAGE: PipelineManager] An unexpected error occurred: 'PreprocessingStage' object has no attribute 'name_enum'
+2025-11-07 17:47:49 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 17:47:49 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 17:47:49 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 17:47:49 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 17:47:49 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 17:47:49 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 17:47:49 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 17:47:49 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 17:47:49 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 17:47:49 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | __init__:95 | Failed to instantiate stage 'preprocessing'. Check its __init__ args: PipelineStage.__init__() missing 1 required positional argument: 'stage_key'
+2025-11-07 17:47:49 | [91mERROR[0m | [94mroot[0m | main:183 | FATAL: An unexpected error occurred: PipelineStage.__init__() missing 1 required positional argument: 'stage_key'
+Traceback (most recent call last):
+  File "D:\Projects and Codes\Intelliscript\main.py", line 143, in main
+    manager = setup_application(settings)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects and Codes\Intelliscript\main.py", line 84, in setup_application
+    manager = PipelineManager(
+              ^^^^^^^^^^^^^^^^
+  File "D:\Projects and Codes\Intelliscript\src\core\pipeline_manager.py", line 87, in __init__
+    stage_instance = StageClass(
+                     ^^^^^^^^^^^
+  File "D:\Projects and Codes\Intelliscript\src\stages\preprocessing.py", line 43, in __init__
+    super().__init__(settings) # No 'name' param
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PipelineStage.__init__() missing 1 required positional argument: 'stage_key'
+2025-11-07 17:53:44 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 17:53:44 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 17:53:44 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 17:53:44 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 17:53:44 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 17:53:44 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 17:53:44 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 17:53:44 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:53:44 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 17:53:44 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 17:53:44 | [92mINFO[0m | [94mExtractionStage[0m | __init__:62 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:53:45 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:76 | Building spaCy EntityRuler from datasets...
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 17:53:45 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:104 | EntityRuler built with 107 patterns.
+2025-11-07 17:53:45 | [92mINFO[0m | [94mExtractionStage[0m | __init__:65 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 17:53:45 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 17:53:45 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 17:53:45 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 17:53:45 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 17:53:45 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 17:53:45 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 17:53:45 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 962.56ms
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 17:53:46 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 17:53:46 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 84.7%, 21 total lines
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 713.18ms
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 2.04ms
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 17:53:46 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: prescription (confidence: 50.00%, keywords: 10)
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 36.57ms
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | _extract_tables_sync:97 | Extracted 0 tables from test_report.pdf
+2025-11-07 17:53:46 | [92mINFO[0m | [94mExtractionStage[0m | process:135 | Extracted 0 total unique entities.
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 15.62ms
+2025-11-07 17:53:46 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | _handle_stage_exception:213 | ❌ ValidationStage FAILED: Stage 'ValidationStage' missing required input: Required field 'extracted_entities' is empty
+2025-11-07 17:53:46 | [93mWARNING[0m | [94msrc.core.pipeline_manager[0m | process_document:142 | Pipeline FAILED with known error: Stage 'ValidationStage' missing required input: Required field 'extracted_entities' is empty
+2025-11-07 17:53:46 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 1736.08ms. Status: failed
+2025-11-07 17:53:46 | [91mERROR[0m | [94m__main__[0m | main:168 | Processing failed. See errors below.
+2025-11-07 17:53:46 | [91mERROR[0m | [94m__main__[0m | main:170 |   - [STAGE: N/A] Stage 'ValidationStage' missing required input: Required field 'extracted_entities' is empty
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 17:58:29 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:58:29 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94mExtractionStage[0m | __init__:62 | Loading spaCy model: en_core_web_sm
+2025-11-07 17:58:29 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:76 | Building spaCy EntityRuler from datasets...
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 17:58:29 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:104 | EntityRuler built with 107 patterns.
+2025-11-07 17:58:29 | [92mINFO[0m | [94mExtractionStage[0m | __init__:65 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 17:58:29 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 17:58:29 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 17:58:29 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 17:58:29 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 17:58:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 990.44ms
+2025-11-07 17:58:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 17:58:30 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 17:58:31 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 84.7%, 21 total lines
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 548.14ms
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 0.00ms
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 17:58:31 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: prescription (confidence: 50.00%, keywords: 10)
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 20.88ms
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | _extract_tables_sync:97 | Extracted 0 tables from test_report.pdf
+2025-11-07 17:58:31 | [92mINFO[0m | [94mExtractionStage[0m | process:135 | Extracted 0 total unique entities.
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 13.51ms
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 17:58:31 | [93mWARNING[0m | [94mValidationStage[0m | process:49 | No entities to validate, creating empty report.
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 2.01ms
+2025-11-07 17:58:31 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | _handle_stage_exception:219 | ❌ SummarizationStage FAILED: Stage 'SummarizationStage' missing required input: Required field 'extracted_entities' is empty
+2025-11-07 17:58:31 | [93mWARNING[0m | [94msrc.core.pipeline_manager[0m | process_document:142 | Pipeline FAILED with known error: Stage 'SummarizationStage' missing required input: Required field 'extracted_entities' is empty
+2025-11-07 17:58:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 1583.09ms. Status: failed
+2025-11-07 17:58:31 | [91mERROR[0m | [94m__main__[0m | main:168 | Processing failed. See errors below.
+2025-11-07 17:58:31 | [91mERROR[0m | [94m__main__[0m | main:170 |   - [STAGE: N/A] Stage 'SummarizationStage' missing required input: Required field 'extracted_entities' is empty
+2025-11-07 18:02:09 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:02:09 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:02:09 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:02:09 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:02:09 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:02:09 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:02:09 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:02:09 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:02:09 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:02:09 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:02:09 | [92mINFO[0m | [94mExtractionStage[0m | __init__:62 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:02:10 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:76 | Building spaCy EntityRuler from datasets...
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:02:10 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:104 | EntityRuler built with 107 patterns.
+2025-11-07 18:02:10 | [92mINFO[0m | [94mExtractionStage[0m | __init__:65 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:02:10 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 18:02:10 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:02:10 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:02:10 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 18:02:10 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 18:02:10 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:02:10 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 956.68ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:02:11 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:02:11 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 84.7%, 21 total lines
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 553.36ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 0.00ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:02:11 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: prescription (confidence: 50.00%, keywords: 10)
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 19.29ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | _extract_tables_sync:97 | Extracted 0 tables from test_report.pdf
+2025-11-07 18:02:11 | [92mINFO[0m | [94mExtractionStage[0m | process:135 | Extracted 0 total unique entities.
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 12.50ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:02:11 | [93mWARNING[0m | [94mValidationStage[0m | process:49 | No entities to validate, creating empty report.
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 1.00ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:02:11 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:02:11 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 0.00ms
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PackagingStage
+2025-11-07 18:02:11 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:02:11 | [91mERROR[0m | [94msrc.services.storage_service[0m | _atomic_writer:60 | Atomic write to D:\Projects and Codes\Intelliscript\data\outputs\test_report.pdf.result.json failed: 'Settings' object has no attribute 'OUTPUT_INDENT'
+2025-11-07 18:02:11 | [91mERROR[0m | [94mPackagingStage[0m | _build_and_save_report:94 | Failed to save final JSON report: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+2025-11-07 18:02:11 | [91mERROR[0m | [94mPackagingStage[0m | process:61 | Packaging failed: [PACKAGING_ERROR] Failed to save JSON report: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+Traceback (most recent call last):
+  File "D:\Projects and Codes\Intelliscript\src\services\storage_service.py", line 54, in _atomic_writer
+    yield f
+  File "D:\Projects and Codes\Intelliscript\src\services\storage_service.py", line 135, in _save_json_sync
+    json.dump(data, f, indent=self.settings.OUTPUT_INDENT, ensure_ascii=False)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects and Codes\Intelliscript\venv\Lib\site-packages\pydantic\main.py", line 1026, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'OUTPUT_INDENT'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects and Codes\Intelliscript\src\stages\packaging.py", line 88, in _build_and_save_report
+    self.storage_service._save_json_sync(json_path, output_dict)
+  File "D:\Projects and Codes\Intelliscript\src\services\storage_service.py", line 134, in _save_json_sync
+    with self._atomic_writer(file_path, 'w', encoding='utf-8') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soumyadeep\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "D:\Projects and Codes\Intelliscript\src\services\storage_service.py", line 64, in _atomic_writer
+    raise FileProcessingError(f"Failed to write file: {str(e)}", file_path=str(file_path))
+src.core.exceptions.FileProcessingError: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Projects and Codes\Intelliscript\src\stages\packaging.py", line 51, in process
+    output_dict = await asyncio.to_thread(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soumyadeep\AppData\Local\Programs\Python\Python312\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Soumyadeep\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects and Codes\Intelliscript\src\stages\packaging.py", line 95, in _build_and_save_report
+    raise PackagingError(f"Failed to save JSON report: {e}")
+src.core.exceptions.PackagingError: [PACKAGING_ERROR] Failed to save JSON report: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+2025-11-07 18:02:11 | [91mERROR[0m | [94msrc.core.pipeline_manager[0m | _handle_stage_exception:221 | ❌ PackagingStage FAILED: Packaging failed: [PACKAGING_ERROR] Failed to save JSON report: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+2025-11-07 18:02:11 | [93mWARNING[0m | [94msrc.core.pipeline_manager[0m | process_document:142 | Pipeline FAILED with known error: Packaging failed: [PACKAGING_ERROR] Failed to save JSON report: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+2025-11-07 18:02:11 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 1585.37ms. Status: failed
+2025-11-07 18:02:11 | [91mERROR[0m | [94m__main__[0m | main:168 | Processing failed. See errors below.
+2025-11-07 18:02:11 | [91mERROR[0m | [94m__main__[0m | main:170 |   - [STAGE: N/A] Packaging failed: [PACKAGING_ERROR] Failed to save JSON report: [FILE_ERROR] Failed to write file: 'Settings' object has no attribute 'OUTPUT_INDENT'
+2025-11-07 18:04:59 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:04:59 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:04:59 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:04:59 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:04:59 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:04:59 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:04:59 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:04:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:04:59 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:05:00 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:05:00 | [92mINFO[0m | [94mExtractionStage[0m | __init__:62 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:05:00 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:76 | Building spaCy EntityRuler from datasets...
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:05:00 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:104 | EntityRuler built with 107 patterns.
+2025-11-07 18:05:00 | [92mINFO[0m | [94mExtractionStage[0m | __init__:65 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:05:00 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 18:05:00 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:05:00 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:05:00 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 18:05:00 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 18:05:00 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:05:00 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 18:05:01 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 956.07ms
+2025-11-07 18:05:01 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:05:01 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:05:02 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 84.7%, 21 total lines
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 591.14ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 1.00ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:05:02 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: prescription (confidence: 50.00%, keywords: 10)
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 31.61ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | _extract_tables_sync:97 | Extracted 0 tables from test_report.pdf
+2025-11-07 18:05:02 | [92mINFO[0m | [94mExtractionStage[0m | process:135 | Extracted 0 total unique entities.
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 14.20ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:05:02 | [93mWARNING[0m | [94mValidationStage[0m | process:49 | No entities to validate, creating empty report.
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 1.01ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:05:02 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:05:02 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 2.07ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PackagingStage
+2025-11-07 18:05:02 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:05:02 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\test_report.pdf.result.json
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PackagingStage completed in 3.13ms
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:05:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 1605.87ms. Status: success
+2025-11-07 18:05:02 | [92mINFO[0m | [94m__main__[0m | main:163 | Processing completed successfully.
+2025-11-07 18:05:02 | [92mINFO[0m | [94m__main__[0m | main:165 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\test_report.pdf.result.json
+2025-11-07 18:05:57 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:05:57 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:05:57 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:05:57 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:05:57 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:05:57 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:05:57 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:05:57 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:05:57 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:05:58 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94mExtractionStage[0m | __init__:62 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:05:58 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:76 | Building spaCy EntityRuler from datasets...
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:05:58 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:104 | EntityRuler built with 107 patterns.
+2025-11-07 18:05:58 | [92mINFO[0m | [94mExtractionStage[0m | __init__:65 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:05:58 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 18:05:58 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:05:58 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:05:58 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:05:58 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 316.14ms
+2025-11-07 18:05:58 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:05:58 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:05:59 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 385.34ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 0.00ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:05:59 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 18.08ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:05:59 | [92mINFO[0m | [94mExtractionStage[0m | process:135 | Extracted 0 total unique entities.
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 9.01ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:05:59 | [93mWARNING[0m | [94mValidationStage[0m | process:49 | No entities to validate, creating empty report.
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 1.00ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:05:59 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:05:59 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 1.00ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PackagingStage
+2025-11-07 18:05:59 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:05:59 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PackagingStage completed in 2.54ms
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:05:59 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 736.61ms. Status: success
+2025-11-07 18:05:59 | [92mINFO[0m | [94m__main__[0m | main:163 | Processing completed successfully.
+2025-11-07 18:05:59 | [92mINFO[0m | [94m__main__[0m | main:165 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:15:51 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:15:51 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:15:51 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:15:51 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:15:51 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:15:51 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:15:51 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:15:51 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:15:51 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:15:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:15:51 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:15:52 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:15:52 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:15:52 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:15:52 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 18:15:52 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:15:52 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:15:52 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:15:52 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 284.47ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:15:52 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 385.83ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 0.00ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:15:52 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 23.19ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 10.81ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:15:52 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 0.99ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:15:52 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 0.00ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PackagingStage
+2025-11-07 18:15:52 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:15:52 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PackagingStage completed in 2.51ms
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:15:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 708.80ms. Status: success
+2025-11-07 18:15:52 | [92mINFO[0m | [94m__main__[0m | main:163 | Processing completed successfully.
+2025-11-07 18:15:52 | [92mINFO[0m | [94m__main__[0m | main:165 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:16:50 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:16:50 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:16:50 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:16:50 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:16:50 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:16:50 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:16:50 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:16:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:16:50 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:16:51 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:16:51 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:16:51 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:16:51 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:16:51 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:16:51 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PackagingStage
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 8 active stages.
+2025-11-07 18:16:51 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:16:51 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:16:51 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 18:16:51 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 18:16:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:16:51 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 894.62ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:16:52 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 84.7%, 21 total lines
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 536.27ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 1.33ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:16:52 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: prescription (confidence: 50.00%, keywords: 10)
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 21.62ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | _extract_tables_sync:97 | Extracted 0 tables from test_report.pdf
+2025-11-07 18:16:52 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 13.16ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:16:52 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 1.00ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:16:52 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 0.00ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PackagingStage
+2025-11-07 18:16:52 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:16:52 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\test_report.pdf.result.json
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PackagingStage completed in 2.00ms
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:16:52 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 1472.03ms. Status: success
+2025-11-07 18:16:52 | [92mINFO[0m | [94m__main__[0m | main:163 | Processing completed successfully.
+2025-11-07 18:16:52 | [92mINFO[0m | [94m__main__[0m | main:165 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\test_report.pdf.result.json
+2025-11-07 18:21:38 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:21:38 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:21:38 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:21:38 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:21:38 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:21:38 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:21:38 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:21:38 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:21:38 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:21:39 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:21:39 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:21:39 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:21:39 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:21:39 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:21:39 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 7 active stages.
+2025-11-07 18:21:39 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:21:39 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:21:39 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\test_report.pdf
+2025-11-07 18:21:39 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: test_report.pdf (41551 bytes)
+2025-11-07 18:21:39 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:21:39 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from test_report.pdf
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 866.79ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:21:40 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:21:40 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 84.7%, 21 total lines
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 535.86ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 1.00ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:21:40 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: prescription (confidence: 50.00%, keywords: 10)
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 19.97ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | _extract_tables_sync:97 | Extracted 0 tables from test_report.pdf
+2025-11-07 18:21:40 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 13.11ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:21:40 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:21:40 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 1.22ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:21:40 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:21:40 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 1.00ms
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:21:40 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 1450.97ms. Status: success
+2025-11-07 18:21:40 | [92mINFO[0m | [94m__main__[0m | main:163 | Processing completed successfully.
+2025-11-07 18:21:40 | [92mINFO[0m | [94m__main__[0m | main:165 | Results saved to: N/A
+2025-11-07 18:21:50 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:21:50 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:21:50 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:21:50 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:21:50 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:21:50 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:21:50 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:21:50 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:21:50 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:21:50 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:21:50 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:21:51 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:21:51 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:21:51 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:21:51 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 7 active stages.
+2025-11-07 18:21:51 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:21:51 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:21:51 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:21:51 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 282.11ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:21:51 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 366.35ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 1.01ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:21:51 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 22.89ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 10.38ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:21:51 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 1.02ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:21:51 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:21:51 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 1.00ms
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:21:51 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 685.77ms. Status: success
+2025-11-07 18:21:51 | [92mINFO[0m | [94m__main__[0m | main:163 | Processing completed successfully.
+2025-11-07 18:21:51 | [92mINFO[0m | [94m__main__[0m | main:165 | Results saved to: N/A
+2025-11-07 18:25:25 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:25:25 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:25:25 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:25:25 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:25:25 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:71 | Initializing pipeline stages...
+2025-11-07 18:25:25 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PreprocessingStage
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: OCRStage
+2025-11-07 18:25:25 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:25:25 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:25:25 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:25:25 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ClassificationStage
+2025-11-07 18:25:25 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:25:26 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:25:26 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:25:26 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ExtractionStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: ValidationStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:25:26 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Loaded stage: SummarizationStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:98 | Pipeline initialized with 7 active stages.
+2025-11-07 18:25:26 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:25:26 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:25:26 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:25:26 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:110 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PreprocessingStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PreprocessingStage completed in 278.01ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: OCRStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:25:26 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ OCRStage completed in 383.34ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: PHIScrubbingStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ PHIScrubbingStage completed in 0.00ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ClassificationStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:25:26 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ClassificationStage completed in 19.50ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ExtractionStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ExtractionStage completed in 11.35ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: ValidationStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:25:26 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ ValidationStage completed in 0.99ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:118 | Executing stage: SummarizationStage
+2025-11-07 18:25:26 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:25:26 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:129 | ✅ SummarizationStage completed in 1.00ms
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:139 | Pipeline completed successfully.
+2025-11-07 18:25:26 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:157 | Pipeline finished in 695.71ms. Status: success
+2025-11-07 18:25:26 | [92mINFO[0m | [94m__main__[0m | main:166 | Processing completed successfully.
+2025-11-07 18:25:26 | [92mINFO[0m | [94m__main__[0m | main:174 | Results saved to: N/A
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:72 | Initializing pipeline stages...
+2025-11-07 18:28:06 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: PreprocessingStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: OCRStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:28:06 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ClassificationStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:28:06 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:28:06 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:28:06 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ExtractionStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ValidationStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:28:06 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: SummarizationStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Pipeline initialized with 7 active stages.
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:97 | Loading final packaging stage...
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:103 | PackagingStage loaded.
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:28:06 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:119 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:28:06 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: PreprocessingStage
+2025-11-07 18:28:06 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ PreprocessingStage completed in 280.16ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: OCRStage
+2025-11-07 18:28:07 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:28:07 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ OCRStage completed in 368.01ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: PHIScrubbingStage
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ PHIScrubbingStage completed in 0.91ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ClassificationStage
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:28:07 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ClassificationStage completed in 19.11ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ExtractionStage
+2025-11-07 18:28:07 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ExtractionStage completed in 10.54ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ValidationStage
+2025-11-07 18:28:07 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:28:07 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ValidationStage completed in 1.08ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: SummarizationStage
+2025-11-07 18:28:07 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:28:07 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ SummarizationStage completed in 1.01ms
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:149 | Pipeline processing loop completed.
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:172 | Pipeline finished in 681.80ms. Status: success
+2025-11-07 18:28:07 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:177 | Handing off to PackagingStage...
+2025-11-07 18:28:07 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:28:07 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:28:07 | [92mINFO[0m | [94m__main__[0m | main:166 | Processing completed successfully.
+2025-11-07 18:28:07 | [92mINFO[0m | [94m__main__[0m | main:174 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:32:01 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:32:01 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:32:01 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:32:01 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:32:01 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:72 | Initializing pipeline stages...
+2025-11-07 18:32:01 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: PreprocessingStage
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: OCRStage
+2025-11-07 18:32:01 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:32:01 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:32:01 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:32:02 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ClassificationStage
+2025-11-07 18:32:02 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:32:02 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:32:02 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:32:02 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ExtractionStage
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ValidationStage
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:32:02 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: SummarizationStage
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Pipeline initialized with 7 active stages.
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:97 | Loading final packaging stage...
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:103 | PackagingStage loaded.
+2025-11-07 18:32:02 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:32:02 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:32:02 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:32:02 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:119 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: PreprocessingStage
+2025-11-07 18:32:02 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ PreprocessingStage completed in 282.56ms
+2025-11-07 18:32:02 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: OCRStage
+2025-11-07 18:32:02 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:32:03 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ OCRStage completed in 433.41ms
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: PHIScrubbingStage
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ PHIScrubbingStage completed in 1.00ms
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ClassificationStage
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:32:03 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ClassificationStage completed in 22.67ms
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ExtractionStage
+2025-11-07 18:32:03 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ExtractionStage completed in 11.09ms
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ValidationStage
+2025-11-07 18:32:03 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:32:03 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ValidationStage completed in 1.00ms
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: SummarizationStage
+2025-11-07 18:32:03 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:32:03 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ SummarizationStage completed in 0.00ms
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:149 | Pipeline processing loop completed.
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:172 | Pipeline finished in 754.43ms. Status: success
+2025-11-07 18:32:03 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:177 | Handing off to PackagingStage...
+2025-11-07 18:32:03 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:32:03 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:32:03 | [92mINFO[0m | [94m__main__[0m | main:166 | Processing completed successfully.
+2025-11-07 18:32:03 | [92mINFO[0m | [94m__main__[0m | main:174 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:32:30 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:36 | Running dependency checks...
+2025-11-07 18:32:30 | [92mINFO[0m | [94m__main__[0m | _check_dependencies:39 | ✅ Tesseract OCR engine found.
+2025-11-07 18:32:30 | [92mINFO[0m | [94m__main__[0m | _create_directories:49 | Ensuring all required directories exist...
+2025-11-07 18:32:30 | [92mINFO[0m | [94m__main__[0m | setup_application:77 | Instantiating shared services...
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.services.dataset_service[0m | __init__:34 | Initialized with 4 datasets.
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.services.storage_service[0m | __init__:32 | StorageService initialized.
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.services.pdf_table_extractor[0m | __init__:32 | PDFTableExtractor initialized with settings: {'vertical_strategy': 'text', 'horizontal_strategy': 'text', 'snap_tolerance': 3}
+2025-11-07 18:32:30 | [92mINFO[0m | [94m__main__[0m | setup_application:83 | Instantiating PipelineManager and injecting dependencies...
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:72 | Initializing pipeline stages...
+2025-11-07 18:32:30 | [92mINFO[0m | [94mPreprocessingStage[0m | __init__:47 | PyMuPDF (fitz) available for PDF processing.
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: PreprocessingStage
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: OCRStage
+2025-11-07 18:32:30 | [92mINFO[0m | [94mPHIScrubbingStage[0m | __init__:34 | PHIScrubbingStage is enabled (V1 Passthrough).
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: PHIScrubbingStage
+2025-11-07 18:32:30 | [92mINFO[0m | [94mClassificationStage[0m | __init__:43 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:32:30 | [92mINFO[0m | [94mClassificationStage[0m | __init__:45 | spaCy model loaded successfully.
+2025-11-07 18:32:30 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ClassificationStage
+2025-11-07 18:32:30 | [92mINFO[0m | [94mExtractionStage[0m | __init__:63 | Loading spaCy model: en_core_web_sm
+2025-11-07 18:32:31 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:78 | Building case-insensitive EntityRuler from datasets...
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'lab_ranges' from D:\Projects and Codes\Intelliscript\datasets\medical\lab_reference_ranges.json...
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'medical_entities' from D:\Projects and Codes\Intelliscript\datasets\medical\medical_entities.json...
+2025-11-07 18:32:31 | [92mINFO[0m | [94mExtractionStage[0m | _build_entity_ruler:121 | EntityRuler built with 107 patterns.
+2025-11-07 18:32:31 | [92mINFO[0m | [94mExtractionStage[0m | __init__:66 | spaCy model and EntityRuler loaded successfully.
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ExtractionStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: ValidationStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'layman_terms' from D:\Projects and Codes\Intelliscript\datasets\templates\layman_phases.json...
+2025-11-07 18:32:31 | [92mINFO[0m | [94mSummarizationStage[0m | __init__:47 | Summarization datasets loaded.
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:88 | Loaded stage: SummarizationStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:93 | Pipeline initialized with 7 active stages.
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:97 | Loading final packaging stage...
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | __init__:103 | PackagingStage loaded.
+2025-11-07 18:32:31 | [92mINFO[0m | [94m__main__[0m | setup_application:91 | Application setup complete.
+2025-11-07 18:32:31 | [92mINFO[0m | [94m__main__[0m | main:151 | Starting Intelli-Script v1.0.0
+2025-11-07 18:32:31 | [92mINFO[0m | [94m__main__[0m | main:152 | Input: data\inputs\sample1.jpg
+2025-11-07 18:32:31 | [92mINFO[0m | [94m__main__[0m | main:153 | Output: D:\Projects and Codes\Intelliscript\data\outputs
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:119 | Processing: sample1.jpg (91915 bytes)
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: PreprocessingStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94mPreprocessingStage[0m | process:67 | Extracted 1 image(s) from sample1.jpg
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ PreprocessingStage completed in 262.22ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: OCRStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94mOCRStage[0m | process:42 | Processing 1 image(s) with OCR
+2025-11-07 18:32:31 | [92mINFO[0m | [94mOCRStage[0m | process:83 | OCR complete: 1 pages, avg confidence: 87.8%, 34 total lines
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ OCRStage completed in 372.07ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: PHIScrubbingStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ PHIScrubbingStage completed in 0.00ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ClassificationStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.services.dataset_service[0m | _load_json:62 | Loading dataset 'document_keywords' from D:\Projects and Codes\Intelliscript\datasets\document_types\document_keywords.json...
+2025-11-07 18:32:31 | [92mINFO[0m | [94mClassificationStage[0m | process:77 | Classified as: unknown (confidence: 43.33%, keywords: 0)
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ClassificationStage completed in 18.20ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ExtractionStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94mExtractionStage[0m | process:150 | Extracted 2 total unique entities.
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ExtractionStage completed in 10.93ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: ValidationStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94mValidationStage[0m | process:53 | Validating 2 entities...
+2025-11-07 18:32:31 | [92mINFO[0m | [94mValidationStage[0m | process:63 | Validation complete: 2 valid, 0 invalid, 0 critical, 0 abnormal.
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ ValidationStage completed in 1.47ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:128 | Executing stage: SummarizationStage
+2025-11-07 18:32:31 | [92mINFO[0m | [94mSummarizationStage[0m | process:55 | Generating summary report
+2025-11-07 18:32:31 | [92mINFO[0m | [94mSummarizationStage[0m | process:61 | Summary generation complete
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:138 | ✅ SummarizationStage completed in 0.00ms
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:149 | Pipeline processing loop completed.
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:172 | Pipeline finished in 666.91ms. Status: success
+2025-11-07 18:32:31 | [92mINFO[0m | [94msrc.core.pipeline_manager[0m | process_document:177 | Handing off to PackagingStage...
+2025-11-07 18:32:31 | [92mINFO[0m | [94mPackagingStage[0m | process:48 | Packaging final report...
+2025-11-07 18:32:31 | [92mINFO[0m | [94mPackagingStage[0m | process:57 | Report packaged and saved to D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
+2025-11-07 18:32:31 | [92mINFO[0m | [94m__main__[0m | main:166 | Processing completed successfully.
+2025-11-07 18:32:31 | [92mINFO[0m | [94m__main__[0m | main:174 | Results saved to: D:\Projects and Codes\Intelliscript\data\outputs\sample1.jpg.result.json
