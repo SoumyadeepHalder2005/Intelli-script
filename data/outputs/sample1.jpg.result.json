@@ -1,0 +1,55 @@
+{
+  "file_name": "sample1.jpg",
+  "document_type": "unknown",
+  "classification_confidence": 0.43333333333333335,
+  "extracted_entities": {
+    "conditions": [
+      {
+        "name": "Hypertension",
+        "value": null,
+        "unit": null,
+        "confidence": 0.9,
+        "source": "text_ruler"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Lisinopril",
+        "value": "10",
+        "unit": "mg",
+        "confidence": 0.9,
+        "source": "text_ruler"
+      }
+    ]
+  },
+  "validation_summary": {
+    "total_validated": 2,
+    "valid_count": 2,
+    "invalid_count": 0,
+    "abnormal_count": 0,
+    "critical_count": 0
+  },
+  "summary": {
+    "document_summary": "📄 Report: sample1.jpg\n🏷️ Type: unknown (Confidence: 43%)\n\n📊 Data Extracted:\n  • 1 medication(s)\n\n⚕️ Findings:\n  ✅ All results within normal ranges",
+    "key_findings": [
+      "All findings within normal limits"
+    ],
+    "diagnoses": [
+      "Hypertension"
+    ],
+    "layman_explanation": "This test result is healthy and in the expected range for you.\n\n💊 **Current Medications:**\nYour report mentions: Lisinopril.\n\n⚕️ **Health Findings:**\n**High blood pressure**: Your blood pressure is higher than normal, which means your heart is working harder to pump blood through your body."
+  },
+  "processing_status": "success",
+  "processing_time_ms": 666.9080257415771,
+  "stage_timings": {
+    "preprocessing": 262.2199058532715,
+    "ocr": 372.0710277557373,
+    "phi_scrubbing": 0.0,
+    "classification": 18.200159072875977,
+    "extraction": 10.932683944702148,
+    "validation": 1.47247314453125,
+    "summarization": 0.0
+  },
+  "errors": [],
+  "warnings": []
+}

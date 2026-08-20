@@ -1,0 +1,140 @@
+{
+  "medical_to_layman": {
+    "hypertension": {
+      "medical": "Hypertension",
+      "layman": "High blood pressure",
+      "explanation": "Your blood pressure is higher than normal, which means your heart is working harder to pump blood through your body."
+    },
+    "diabetes": {
+      "medical": "Diabetes Mellitus",
+      "layman": "High blood sugar",
+      "explanation": "Your body has difficulty controlling the amount of sugar in your blood, either because it doesn't produce enough insulin or can't use it properly."
+    },
+    "myocardial_infarction": {
+      "medical": "Myocardial Infarction (MI)",
+      "layman": "Heart attack",
+      "explanation": "A blocked artery has prevented blood flow to part of your heart muscle, causing damage."
+    },
+    "pneumonia": {
+      "medical": "Pneumonia",
+      "layman": "Lung infection",
+      "explanation": "An infection in your lungs has caused inflammation and filled air sacs with fluid, making it hard to breathe."
+    },
+    "arrhythmia": {
+      "medical": "Cardiac Arrhythmia",
+      "layman": "Irregular heartbeat",
+      "explanation": "Your heart is beating too fast, too slow, or in an irregular pattern."
+    },
+    "hyperlipidemia": {
+      "medical": "Hyperlipidemia",
+      "layman": "High cholesterol",
+      "explanation": "You have too much cholesterol (a fatty substance) in your blood, which can build up in your arteries."
+    },
+    "anemia": {
+      "medical": "Anemia",
+      "layman": "Low red blood cell count",
+      "explanation": "You don't have enough healthy red blood cells to carry oxygen throughout your body."
+    },
+    "hypothyroidism": {
+      "medical": "Hypothyroidism",
+      "layman": "Underactive thyroid",
+      "explanation": "Your thyroid gland isn't producing enough hormones, which slows down your metabolism."
+    },
+    "gastritis": {
+      "medical": "Gastritis",
+      "layman": "Stomach inflammation",
+      "explanation": "The lining of your stomach is inflamed or irritated."
+    },
+    "arthritis": {
+      "medical": "Arthritis",
+      "layman": "Joint inflammation",
+      "explanation": "One or more of your joints are inflamed, causing pain, stiffness, and reduced movement."
+    },
+    "asthma": {
+      "medical": "Asthma",
+      "layman": "Difficulty breathing",
+      "explanation": "Your airways are inflamed and narrowed, making it hard to breathe, especially during physical activity."
+    },
+    "COPD": {
+      "medical": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "layman": "Chronic lung disease",
+      "explanation": "Long-term damage to your lungs makes it progressively harder to breathe."
+    },
+    "stroke": {
+      "medical": "Cerebrovascular Accident (CVA)",
+      "layman": "Stroke",
+      "explanation": "A blood vessel in your brain was blocked or burst, preventing blood flow to brain tissue."
+    },
+    "CKD": {
+      "medical": "Chronic Kidney Disease (CKD)",
+      "layman": "Kidney problems",
+      "explanation": "Your kidneys aren't filtering waste from your blood properly, and this happens gradually over time."
+    }
+  },
+  "test_results": {
+    "normal": {
+      "medical": "Within normal limits (WNL)",
+      "layman": "Normal",
+      "explanation": "This test result is healthy and in the expected range for you."
+    },
+    "abnormal": {
+      "medical": "Abnormal",
+      "layman": "Out of normal range",
+      "explanation": "This test result is higher or lower than the expected range, which may need attention."
+    },
+    "critical": {
+      "medical": "Critical value",
+      "layman": "Dangerously high or low",
+      "explanation": "This result is severely outside the normal range and requires immediate medical attention."
+    },
+    "pending": {
+      "medical": "Pending",
+      "layman": "Still being processed",
+      "explanation": "This test result is not yet available; the lab is still analyzing the sample."
+    }
+  },
+  "instructions": {
+    "fasting": {
+      "medical": "NPO (nil per os) / Fasting",
+      "layman": "Don't eat or drink",
+      "explanation": "You should not have any food or beverages (except water) before this test to ensure accurate results."
+    },
+    "medication_hold": {
+      "medical": "Hold medications",
+      "layman": "Skip your regular medications",
+      "explanation": "Don't take your usual medications before this test; your doctor will tell you when to resume them."
+    },
+    "bed_rest": {
+      "medical": "Bed rest",
+      "layman": "Stay in bed",
+      "explanation": "You should remain in bed and avoid physical activity to allow your body to recover."
+    },
+    "follow_up": {
+      "medical": "Follow-up appointment",
+      "layman": "Come back for a visit",
+      "explanation": "You need to schedule another visit with your doctor to review results or check your progress."
+    },
+    "as_needed": {
+      "medical": "PRN (Pro re nata)",
+      "layman": "Take as needed",
+      "explanation": "You can take this medication whenever you feel you need it, but follow the dosage instructions."
+    }
+  },
+  "severity_levels": {
+    "mild": {
+      "medical": "Mild",
+      "layman": "Not serious",
+      "explanation": "Your condition is minor and should improve with basic treatment or time."
+    },
+    "moderate": {
+      "medical": "Moderate",
+      "layman": "Somewhat serious",
+      "explanation": "Your condition needs medical attention and treatment to prevent it from getting worse."
+    },
+    "severe": {
+      "medical": "Severe",
+      "layman": "Very serious",
+      "explanation": "Your condition is serious and requires immediate medical intervention."
+    }
+  }
+}

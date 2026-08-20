@@ -1,0 +1,213 @@
+{
+  "blood_tests": {
+    "hemoglobin": {
+      "name": "Hemoglobin",
+      "unit": "g/dL",
+      "normal_range": [12.0, 17.5],
+      "male_range": [13.5, 17.5],
+      "female_range": [12.0, 15.5],
+      "critical_low": 7.0,
+      "critical_high": 20.0,
+      "description": "Protein in red blood cells that carries oxygen"
+    },
+    "hematocrit": {
+      "name": "Hematocrit",
+      "unit": "%",
+      "normal_range": [38.8, 50.0],
+      "male_range": [41.0, 50.0],
+      "female_range": [36.0, 44.0],
+      "critical_low": 20.0,
+      "critical_high": 60.0,
+      "description": "Percentage of red blood cells in total blood volume"
+    },
+    "white_blood_cells": {
+      "name": "WBC (White Blood Cells)",
+      "unit": "10^3/μL",
+      "normal_range": [4.5, 11.0],
+      "critical_low": 2.0,
+      "critical_high": 30.0,
+      "description": "Cells that fight infection"
+    },
+    "platelets": {
+      "name": "Platelets",
+      "unit": "10^3/μL",
+      "normal_range": [150.0, 400.0],
+      "critical_low": 50.0,
+      "critical_high": 1000.0,
+      "description": "Cells involved in blood clotting"
+    },
+    "glucose": {
+      "name": "Blood Glucose (Fasting)",
+      "unit": "mg/dL",
+      "normal_range": [70.0, 100.0],
+      "prediabetic_range": [100.0, 125.0],
+      "diabetic_range": [126.0, 300.0],
+      "critical_low": 40.0,
+      "critical_high": 400.0,
+      "description": "Level of sugar in the blood"
+    },
+    "creatinine": {
+      "name": "Creatinine",
+      "unit": "mg/dL",
+      "normal_range": [0.7, 1.3],
+      "male_normal": [0.8, 1.3],
+      "female_normal": [0.6, 1.2],
+      "critical_high": 4.0,
+      "description": "Waste product that indicates kidney function"
+    },
+    "urea": {
+      "name": "Blood Urea Nitrogen (BUN)",
+      "unit": "mg/dL",
+      "normal_range": [7.0, 20.0],
+      "critical_high": 100.0,
+      "description": "Waste product from protein breakdown"
+    },
+    "sodium": {
+      "name": "Sodium",
+      "unit": "mEq/L",
+      "normal_range": [135.0, 145.0],
+      "critical_low": 120.0,
+      "critical_high": 160.0,
+      "description": "Electrolyte important for nerve and muscle function"
+    },
+    "potassium": {
+      "name": "Potassium",
+      "unit": "mEq/L",
+      "normal_range": [3.5, 5.0],
+      "critical_low": 2.5,
+      "critical_high": 6.5,
+      "description": "Electrolyte important for heart rhythm"
+    },
+    "calcium": {
+      "name": "Calcium",
+      "unit": "mg/dL",
+      "normal_range": [8.5, 10.2],
+      "critical_low": 6.5,
+      "critical_high": 13.0,
+      "description": "Mineral important for bones and heart"
+    },
+    "cholesterol": {
+      "name": "Total Cholesterol",
+      "unit": "mg/dL",
+      "desirable": [0, 200],
+      "borderline_high": [200, 239],
+      "high": [240, 500],
+      "description": "Total amount of cholesterol in blood"
+    },
+    "ldl": {
+      "name": "LDL Cholesterol (Bad)",
+      "unit": "mg/dL",
+      "optimal": [0, 100],
+      "near_optimal": [100, 130],
+      "borderline_high": [130, 160],
+      "high": [160, 190],
+      "very_high": [190, 500],
+      "description": "Low-density lipoprotein cholesterol"
+    },
+    "hdl": {
+      "name": "HDL Cholesterol (Good)",
+      "unit": "mg/dL",
+      "low": [0, 40],
+      "acceptable": [40, 50],
+      "desirable": [50, 200],
+      "description": "High-density lipoprotein cholesterol"
+    },
+    "triglycerides": {
+      "name": "Triglycerides",
+      "unit": "mg/dL",
+      "normal": [0, 150],
+      "borderline_high": [150, 200],
+      "high": [200, 500],
+      "very_high": [500, 2000],
+      "description": "Type of fat in the blood"
+    },
+    "ast": {
+      "name": "AST (Aspartate Aminotransferase)",
+      "unit": "U/L",
+      "normal_range": [10, 40],
+      "critical_high": 200,
+      "description": "Enzyme used to assess liver health"
+    },
+    "alt": {
+      "name": "ALT (Alanine Aminotransferase)",
+      "unit": "U/L",
+      "normal_range": [7, 56],
+      "critical_high": 200,
+      "description": "Enzyme specific to liver damage"
+    },
+    "bilirubin": {
+      "name": "Total Bilirubin",
+      "unit": "mg/dL",
+      "normal_range": [0.1, 1.2],
+      "critical_high": 4.0,
+      "description": "Pigment from breakdown of hemoglobin"
+    },
+    "albumin": {
+      "name": "Albumin",
+      "unit": "g/dL",
+      "normal_range": [3.5, 5.0],
+      "critical_low": 2.0,
+      "description": "Protein important for maintaining blood pressure"
+    },
+    "tsh": {
+      "name": "TSH (Thyroid Stimulating Hormone)",
+      "unit": "mIU/L",
+      "normal_range": [0.4, 4.0],
+      "description": "Hormone that controls thyroid function"
+    }
+  },
+  "vital_signs": {
+    "blood_pressure_systolic": {
+      "name": "Blood Pressure Systolic",
+      "unit": "mmHg",
+      "normal_range": [90, 120],
+      "elevated": [120, 130],
+      "high_stage_1": [130, 140],
+      "high_stage_2": [140, 200],
+      "hypertensive_crisis": [200, 250],
+      "description": "Upper pressure reading"
+    },
+    "blood_pressure_diastolic": {
+      "name": "Blood Pressure Diastolic",
+      "unit": "mmHg",
+      "normal_range": [60, 80],
+      "elevated": [80, 90],
+      "high_stage_1": [90, 100],
+      "high_stage_2": [100, 120],
+      "description": "Lower pressure reading"
+    },
+    "heart_rate": {
+      "name": "Heart Rate",
+      "unit": "bpm",
+      "normal_range": [60, 100],
+      "bradycardia": [0, 60],
+      "tachycardia": [100, 200],
+      "description": "Beats per minute"
+    },
+    "respiratory_rate": {
+      "name": "Respiratory Rate",
+      "unit": "breaths/min",
+      "normal_range": [12, 20],
+      "tachypnea": [20, 60],
+      "description": "Breaths per minute"
+    },
+    "body_temperature": {
+      "name": "Body Temperature",
+      "unit": "°C",
+      "normal": 37.0,
+      "hypothermia": [0, 36.0],
+      "fever": [38.0, 41.0],
+      "critical_fever": [41.0, 45.0],
+      "description": "Core body temperature"
+    },
+    "oxygen_saturation": {
+      "name": "SpO2 (Oxygen Saturation)",
+      "unit": "%",
+      "normal_range": [95, 100],
+      "acceptable": [90, 95],
+      "hypoxemia": [80, 90],
+      "severe": [0, 80],
+      "description": "Percentage of oxygen in blood"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "file_name": "test_report.pdf",
+  "document_type": "prescription",
+  "classification_confidence": 0.5,
+  "extracted_entities": {
+    "test_results": [],
+    "medications": [
+      {
+        "name": "Lisinopril",
+        "dosage": "10",
+        "unit": "mg",
+        "frequency": "As prescribed",
+        "confidence": 0.9
+      }
+    ]
+  },
+  "validation_summary": {
+    "total_validated": 2,
+    "valid_count": 2,
+    "invalid_count": 0,
+    "abnormal_count": 0,
+    "critical_count": 0
+  },
+  "summary": {
+    "document_summary": "📄 Report: test_report.pdf\n🏷️ Type: prescription (Confidence: 50%)\n\n📊 Data Extracted:\n  • 1 medication(s)\n\n⚕️ Findings:\n  ✅ All results within normal ranges",
+    "key_findings": [
+      "All findings within normal limits"
+    ],
+    "diagnoses": [],
+    "layman_explanation": "This test result is healthy and in the expected range for you.\n\n💊 **Current Medications:**\nYour report mentions: Lisinopril."
+  },
+  "processing_status": "processing",
+  "processing_time_ms": 0.0,
+  "stage_timings": {
+    "preprocessing": 894.615650177002,
+    "ocr": 536.2741947174072,
+    "phi_scrubbing": 1.3272762298583984,
+    "classification": 21.619558334350586,
+    "extraction": 13.16380500793457,
+    "validation": 0.9958744049072266,
+    "summarization": 0.0
+  },
+  "errors": [],
+  "warnings": []
+}

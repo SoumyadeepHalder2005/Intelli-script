@@ -1,0 +1,91 @@
+# Python cache and environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment and secrets
+.env
+.env.*
+*.env
+secrets.json
+*.key
+*.pem
+
+# Logs and runtime output
+*.log
+logs/
+
+# Python packaging / test / coverage
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Large raw datasets
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# Keep specific lightweight documentation/sample files if needed
+!HomeCredit_columns_description.csv
+!sample_submission.csv
+
+# Generated cleaned datasets
+*.cleaned.csv
+application_train_processed.csv
+
+# Generated plots and reports
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# Keep docs assets if intentionally versioned
+!docs/
+!docs/*.md
+!docs/*.pdf
+!docs/*.png
+!docs/*.jpg
+!docs/*.jpeg
+
+# Model artifacts
+*.keras
+*.h5
+*.hdf
+*.onnx
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+*.swp
+*~

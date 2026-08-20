@@ -1,0 +1,152 @@
+{
+  "lab_report": {
+    "keywords": [
+      "laboratory",
+      "lab report",
+      "test results",
+      "reference range",
+      "abnormal",
+      "normal",
+      "critical",
+      "pending",
+      "result",
+      "hemoglobin",
+      "glucose",
+      "creatinine", 
+      "cholesterol",
+      "specimen",
+      "method",
+      "units",
+      "collection date",
+      "patient name",
+      "patient ID",
+      "DOB",
+      "date of birth",
+      "physician",
+      "ordering provider"
+    ],
+    "weight": 0.25,
+    "indicators": ["test result", "reference range", "units", "abnormal flag"]
+  },
+  "prescription": {
+    "keywords": [
+      "prescription",
+      "Rx",
+      "prescribed",
+      "medication",
+      "drug",
+      "dosage",
+      "dose",
+      "tablets",
+      "capsules",
+      "mg",
+      "ml",
+      "twice daily",
+      "three times daily",
+      "as needed",
+      "every 6 hours",
+      "refills",
+      "quantity",
+      "instructions",
+      "take with food",
+      "pharmacy",
+      "pharmacist",
+      "patient",
+      "physician signature"
+    ],
+    "weight": 0.25,
+    "indicators": [
+      "medication name",
+      "dosage",
+      "frequency",
+      "quantity",
+      "refills"
+    ]
+  },
+  "diagnosis_report": {
+    "keywords": [
+      "diagnosis",
+      "impression",
+      "clinical findings",
+      "assessment",
+      "differential diagnosis",
+      "provisional diagnosis",
+      "ICD code",
+      "disease",
+      "condition",
+      "disorder",
+      "examination",
+      "physical exam",
+      "vital signs",
+      "complaints",
+      "symptoms",
+      "history",
+      "HPI",
+      "past medical history",
+      "PMH",
+      "medications",
+      "allergies"
+    ],
+    "weight": 0.2,
+    "indicators": ["impression", "diagnosis", "clinical findings", "assessment"]
+  },
+  "discharge_summary": {
+    "keywords": [
+      "discharge",
+      "hospital course",
+      "hospital summary",
+      "admission",
+      "discharge date",
+      "admission date",
+      "diagnosis at discharge",
+      "diagnoses",
+      "procedures performed",
+      "medications on discharge",
+      "follow-up",
+      "disposition",
+      "discharged to",
+      "discharged in good condition",
+      "patient instructions",
+      "activity",
+      "diet",
+      "visiting nurse",
+      "primary care physician"
+    ],
+    "weight": 0.2,
+    "indicators": [
+      "discharge summary",
+      "admission date",
+      "discharge date",
+      "disposition"
+    ]
+  },
+  "patient_history": {
+    "keywords": [
+      "patient history",
+      "medical history",
+      "past medical history",
+      "surgical history",
+      "family history",
+      "social history",
+      "allergies",
+      "medications",
+      "review of systems",
+      "chief complaint",
+      "present illness",
+      "HPI",
+      "history and physical",
+      "H&P",
+      "vital signs",
+      "physical examination",
+      "assessment",
+      "plan"
+    ],
+    "weight": 0.15,
+    "indicators": [
+      "history",
+      "physical examination",
+      "review of systems",
+      "allergies"
+    ]
+  }
+}
